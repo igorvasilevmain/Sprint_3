@@ -6,7 +6,7 @@ from locators import Locators
 email = 'igor_vasilev_08_123@example.com'
 password = 'Qwe123'
 
-class TestStellarBurgers:
+class TestStellarBurgersLogin:
 
     def test_successful_account_login_from_sign_in_button(self, driver):
         driver.find_element(*Locators.SIGN_IN_BUTTON).click()

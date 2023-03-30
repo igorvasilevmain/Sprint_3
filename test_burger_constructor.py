@@ -2,7 +2,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from locators import Locators
 
-class TestStellarBurgers:
+class TestStellarBurgersGoToConstructorSections:
 
     def test_go_to_buns_section(self, driver):
         driver.find_element(*Locators.STUFFING_SECTION).click()

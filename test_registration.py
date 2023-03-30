@@ -5,7 +5,7 @@ from locators import Locators
 
 faker = Faker()
 
-class TestStellarBurgers:
+class TestStellarBurgersRegistration:
 
     def test_successful_registration(self, driver):
         name = 'Игорь'
