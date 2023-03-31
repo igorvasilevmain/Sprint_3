@@ -5,7 +5,7 @@ from locators import Locators
 
 url = 'https://stellarburgers.nomoreparties.site/'
 
-@pytest.fixture(scope='function')
+@pytest.fixture
 def driver():
     options = Options()
     options.add_argument("--window-size=1920,1080")
@@ -16,7 +16,7 @@ def driver():
     yield browser
     browser.quit()
 
-@pytest.fixture(scope='function')
+@pytest.fixture
 def login(driver):
     driver.find_element(*Locators.SIGN_IN_BUTTON).click()
     driver.find_element(*Locators.EMAIL_INPUT_FIELD_ON_AUTH_FORM).send_keys('igor_vasilev_08_123@example.com')
