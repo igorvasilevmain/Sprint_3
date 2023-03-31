@@ -17,8 +17,8 @@ class TestStellarBurgersRegistration:
         driver.find_element(*Locators.EMAIL_INPUT_FIELD).send_keys(email)
         driver.find_element(*Locators.PASSWORD_INPUT_FIELD).send_keys(password)
         driver.find_element(*Locators.REGISTRATION_BUTTON).click()
-        auth_form = WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.AUTH_FORM)).text
-        assert auth_form == 'Вход'
+        sign_in_button = WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.SIGN_IN_BUTTON_ON_AUTH_FORM)).text
+        assert sign_in_button == 'Войти'
 
     def test_try_to_registration_with_incorrectly_filled_fields(self, driver):
         name = ''

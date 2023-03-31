@@ -8,5 +8,5 @@ class TestStellarBurgersLogout:
         login.find_element(*Locators.PRIVATE_OFFICE_BUTTON).click()
         WebDriverWait(login, 5).until(EC.visibility_of_element_located(Locators.USER_PROFILE)).text
         login.find_element(*Locators.LOGOUT_BUTTON).click()
-        auth_form = WebDriverWait(login, 5).until(EC.visibility_of_element_located(Locators.AUTH_FORM)).text
-        assert auth_form == 'Вход'
+        sign_in_button = WebDriverWait(login, 5).until(EC.visibility_of_element_located(Locators.SIGN_IN_BUTTON_ON_AUTH_FORM)).text
+        assert sign_in_button == 'Войти'
