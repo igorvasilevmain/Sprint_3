@@ -9,4 +9,4 @@ class TestStellarBurgersGoToPrivateOffice:
         login.find_element(*Locators.PRIVATE_OFFICE_BUTTON).click()
         user_profile = WebDriverWait(login, 5).until(
             EC.visibility_of_element_located(Locators.USER_PROFILE)).text
-        assert user_profile == 'Профиль'
+        assert user_profile == 'Профиль', f'Не обнаружен раздел "{user_profile}"'

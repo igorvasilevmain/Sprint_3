@@ -20,7 +20,7 @@ class TestStellarBurgersRegistration:
         driver.find_element(*Locators.REGISTRATION_BUTTON).click()
         sign_in_button = WebDriverWait(driver, 5).until(
             EC.visibility_of_element_located(Locators.SIGN_IN_BUTTON_ON_AUTH_FORM)).text
-        assert sign_in_button == 'Войти'
+        assert sign_in_button == 'Войти', f'Не найдена кнопка "{sign_in_button}"'
 
     def test_try_to_registration_with_incorrectly_filled_fields(self, driver):
         name = ''
@@ -34,4 +34,4 @@ class TestStellarBurgersRegistration:
         driver.find_element(*Locators.REGISTRATION_BUTTON).click()
         error = WebDriverWait(driver, 5).until(
             EC.visibility_of_element_located(Locators.INCORRECT_PASSWORD_ERROR)).text
-        assert error == 'Некорректный пароль'
+        assert error == 'Некорректный пароль', f'Не обнаружена ошибка "{error}"'
