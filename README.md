@@ -1,8 +1,15 @@
+Автотесты для сервиса Stellar Burgers — https://stellarburgers.nomoreparties.site/
+
 В файле locators.py — используемые в тестах локаторы;
 
-В файле conftest.py — используемые в тестах фикстуры;
+В файле conftest.py — используемые в тестах фикстуры; 
+
+В файле requirements.txt — список библиотек и модулей используемых в проекте;
+
+Авторизационные данные хранятся локально в .env-файле (не закоммичены на Git);
 
 В файле burger_constructor_data.py — hardcoded-значения из Конструктора бургеров.
+
 
 
 Реализованные тесты:
@@ -31,4 +38,3 @@ test_burger_constructor.py
 1. test_go_to_buns_section — проверка перехода к секции булок 
 2. test_go_to_sauce_section — проверка перехода к секции соусов
 3. test_go_to_stuffing_section — проверка перехода к секции начинок
-
