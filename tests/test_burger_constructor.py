@@ -21,7 +21,8 @@ class TestStellarBurgersGoToConstructorSections:
         modal = WebDriverWait(driver, 5).until(
             EC.visibility_of_element_located(Locators.MODAL)).text
         assert BurgerConstructorData.sauce_with_ships in modal, \
-            f'{BurgerConstructorData.sauce_with_ships} отсутствует в модальном окне'
+            f'{BurgerConstructorData.sauce_with_ships} ' \
+            f'отсутствует в модальном окне'
 
     def test_go_to_stuffing_section(self, driver):
         driver.find_element(*Locators.STUFFING_SECTION).click()
@@ -31,4 +32,5 @@ class TestStellarBurgersGoToConstructorSections:
         modal = WebDriverWait(driver, 5).until(
             EC.visibility_of_element_located(Locators.MODAL)).text
         assert BurgerConstructorData.cheese_with_mold in modal, \
-            f'{BurgerConstructorData.cheese_with_mold} отсутствует в модальном окне'
+            f'{BurgerConstructorData.cheese_with_mold} ' \
+            f'отсутствует в модальном окне'

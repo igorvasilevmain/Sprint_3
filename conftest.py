@@ -28,7 +28,8 @@ def driver():
 @pytest.fixture
 def login(driver):
     driver.find_element(*Locators.SIGN_IN_BUTTON).click()
-    driver.find_element(*Locators.EMAIL_INPUT_FIELD_ON_AUTH_FORM).send_keys(EMAIL)
+    driver.find_element(
+        *Locators.EMAIL_INPUT_FIELD_ON_AUTH_FORM).send_keys(EMAIL)
     driver.find_element(*Locators.PASSWORD_INPUT_FIELD).send_keys(PASSWORD)
     driver.find_element(*Locators.SIGN_IN_BUTTON_ON_AUTH_FORM).click()
     return driver

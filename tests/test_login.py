@@ -35,7 +35,8 @@ class TestStellarBurgersLogin:
         assert checkout_button == 'Оформить заказ', \
             f'Не обнаружена кнопка "{checkout_button}"'
 
-    def test_successful_account_login_from_sign_in_link_on_registration_form(self, driver):
+    def test_successful_login_from_sign_in_link_on_registration_form(
+            self, driver):
         driver.find_element(*Locators.PRIVATE_OFFICE_BUTTON).click()
         driver.find_element(*Locators.REGISTRATION_LINK).click()
         driver.find_element(*Locators.SIGN_IN_LINK).click()
@@ -48,7 +49,8 @@ class TestStellarBurgersLogin:
         assert checkout_button == 'Оформить заказ', \
             f'Не обнаружена кнопка "{checkout_button}"'
 
-    def test_successful_account_login_from_sign_in_link_on_password_restore_form(self, driver):
+    def test_successful_login_from_sign_in_link_on_password_restore_form(
+            self, driver):
         driver.find_element(*Locators.SIGN_IN_BUTTON).click()
         driver.find_element(*Locators.PASSWORD_RESTORE_LINK).click()
         driver.find_element(*Locators.SIGN_IN_LINK).click()
